@@ -1,10 +1,4 @@
-/*
-  Warnings:
 
-  - You are about to drop the column `Role` on the `User` table. All the data in the column will be lost.
-
-*/
--- CreateTable
 CREATE TABLE "Tenant" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "name" TEXT NOT NULL,
@@ -12,7 +6,7 @@ CREATE TABLE "Tenant" (
     "updatedAt" DATETIME NOT NULL
 );
 
--- RedefineTables
+
 PRAGMA defer_foreign_keys=ON;
 PRAGMA foreign_keys=OFF;
 CREATE TABLE "new_User" (
